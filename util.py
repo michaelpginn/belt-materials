@@ -17,6 +17,11 @@ def load_raw_text(corpus_directory: str, file_names=None) -> str:
         file_path = os.path.join(corpus_directory, file_name)
         if os.path.isdir(file_path):
             continue
+            
+        #  Make sure we only read text files
+        if ".txt" not in file_name:
+            continue
+            
         with open(file_path, 'r') as file:
             file_contents = file.read()
             corpus += (file_contents + "\n")
