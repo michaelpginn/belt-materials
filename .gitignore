@@ -3,3 +3,4 @@
 __pycache__
 gradio_cached_examples
 .jupyter
+skills/.ipynb_checkpoints
